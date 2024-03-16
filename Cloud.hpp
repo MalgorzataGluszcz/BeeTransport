@@ -1,14 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class Background
+class Cloud
 {
 public:
-	Background(sf::Texture *tex);
+	Cloud(sf::Texture* tex, sf::Vector2f position);
 
+	void update();
 	void draw(sf::RenderTarget &target);
 
 private:
-	sf::Texture *m_texture;
+	void move();
+
+private:
+	sf::Texture* m_texture;
 	sf::Sprite m_sprite;
 };

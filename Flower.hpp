@@ -1,14 +1,15 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class Background
+class Flower
 {
 public:
-	Background(sf::Texture *tex);
+	Flower(sf::Texture *texture, sf::Vector2f position);
 
+	void update();
 	void draw(sf::RenderTarget &target);
 
 private:
-	sf::Texture *m_texture;
+	sf::Texture* m_texture;
 	sf::Sprite m_sprite;
 };

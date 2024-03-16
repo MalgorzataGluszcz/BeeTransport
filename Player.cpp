@@ -1,10 +1,9 @@
 #include "Player.hpp"
 
-Player::Player(sf::Texture* tex, int keyUp, int keyDown, int keyLeft, int keyRight, int takeHoney)
+Player::Player(sf::Texture* tex, int keyUp, int keyDown, int keyLeft, int keyRight, int takeHoney) : m_texture(tex)
 {
-	this->m_texture = tex;
 	m_sprite.setTexture(*this->m_texture);
-	m_sprite.setScale(0.4f, 0.4f);
+	m_sprite.setScale(0.6f, 0.6f);
 
 	// Set up player controls
 	this->m_controls[Controls::UP] = keyUp;

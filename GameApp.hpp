@@ -1,5 +1,9 @@
 #pragma once
+#include "Background.hpp"
+#include "Cloud.hpp"
+#include "Flower.hpp"
 #include "Player.hpp"
+#include "Grass.hpp"
 
 class GameApp
 {
@@ -20,4 +24,16 @@ private:
 
 	Player *m_player;
 	sf::Texture m_playerTexture;
+
+	Background *m_background;
+	sf::Texture m_backgroundTexture;
+
+	Cloud *m_cloud;
+	sf::Texture m_cloudTexture;
+
+	Flower* m_flower;
+	sf::Texture m_flowerTexture;
+
+	Grass* m_grass;
+	sf::Texture m_grassTexture;
 };
