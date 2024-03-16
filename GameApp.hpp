@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "Player.hpp"
 
 class GameApp
 {
@@ -17,4 +17,7 @@ private:
 
 private:
 	sf::RenderWindow *m_window;
+
+	Player *m_player;
+	sf::Texture m_playerTexture;
 };

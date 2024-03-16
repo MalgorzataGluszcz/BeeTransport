@@ -3,12 +3,14 @@
 GameApp::GameApp(sf::RenderWindow *window)
 {
 	this->m_window = window;
+
+	this->m_playerTexture.loadFromFile("res/gfx/BeePlayer.png");
+
+	this->m_player = new Player(&this->m_playerTexture);
 }
 
 GameApp::~GameApp()
-{
-	
-}
+{}
 
 void GameApp::run()
 {
@@ -41,11 +43,12 @@ void GameApp::handleUserInputs()
 
 void GameApp::update()
 {
+	this->m_player->update();
 }
 
 void GameApp::draw(sf::RenderWindow *window)
 {
 	window->clear();
-	//window->draw();
+	this->m_player->draw(*window);
 	window->display();
 }
