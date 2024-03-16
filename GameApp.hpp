@@ -1,4 +1,7 @@
 #pragma once
+#include <vector>
+
+#include "TextLoader.hpp"
 #include "Background.hpp"
 #include "Cloud.hpp"
 #include "Flower.hpp"
@@ -22,6 +25,9 @@ private:
 private:
 	sf::RenderWindow *m_window;
 
+	TextLoader* m_textLoader;
+	sf::Font m_font;
+
 	Player *m_player;
 	sf::Texture m_playerTexture;
 
@@ -31,7 +37,7 @@ private:
 	Cloud *m_cloud;
 	sf::Texture m_cloudTexture;
 
-	Flower* m_flower;
+	std::vector<Flower> m_flowers;
 	sf::Texture m_flowerTexture;
 
 	Grass* m_grass;
